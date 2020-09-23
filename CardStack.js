@@ -7,7 +7,8 @@ import {
   PanResponder,
   Dimensions,
   Text,
-  Platform
+  Platform,
+  StyleSheet
 } from 'react-native';
 
 const { height, width } = Dimensions.get('window');
@@ -422,7 +423,7 @@ class CardStack extends Component {
         <Animated.View
           {...this._setPointerEvents(topCard, 'cardB')}
           style={[{
-            position: 'absolute',
+            ...StyleSheet.absoluteFill,
             zIndex: (topCard === 'cardB') ? 3 : 2,
             ...Platform.select({
               android: {
@@ -441,7 +442,7 @@ class CardStack extends Component {
         <Animated.View
           {...this._setPointerEvents(topCard, 'cardA')}
           style={[{
-            position: 'absolute',
+            ...StyleSheet.absoluteFill,
             zIndex: (topCard === 'cardA') ? 3 : 2,
             ...Platform.select({
               android: {
