@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native';
 
-const Card = ({ style, children }) => (
+const Card = ({ style= {}, onSwiped= () => {}, onSwipedLeft= () => {}, onSwipedRight= () => {}, onSwipedTop= () => {}, onSwipedBottom= () => {}, children }) => (
   <View style={style} >
     {children}
   </View>);
@@ -18,13 +18,4 @@ Card.propTypes = {
   onSwipedBottom: PropTypes.func,
   onSwiped: PropTypes.func,
 }
-Card.defaultProps = {
-  style:{},
-  onSwiped: () => {},
-  onSwipedLeft: () => {},
-  onSwipedRight: () => {},
-  onSwipedTop: () => {},
-  onSwipedBottom: () => {},
-}
-
 export default Card;
