@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native';
 
-const Card = ({ style= {}, onSwiped= () => {}, onSwipedLeft= () => {}, onSwipedRight= () => {}, onSwipedTop= () => {}, onSwipedBottom= () => {}, children }) => (
+const Card = ({ style, onSwiped= () => {}, onSwipedLeft= () => {}, onSwipedRight= () => {}, onSwipedTop= () => {}, onSwipedBottom= () => {}, children }) => (
   <View style={style} >
     {children}
   </View>);
